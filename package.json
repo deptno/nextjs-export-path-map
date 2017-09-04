@@ -1,0 +1,36 @@
+{
+  "name": "nextjs-export-path-map",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/deptno/ts-module-boilerplate.git",
+  "description": "export all pages, except start with _, test",
+  "author": "deptno <deptno@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.26",
+    "jest": "^20.0.4",
+    "typescript": "^2.5.2"
+  },
+  "scripts": {
+    "prepublish": "tsc --outDir dist --declaration",
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/*.(test|spec).(ts|tsx)"
+    ]
+  },
+  "dependencies": {
+    "directory-tree": "^2.0.0"
+  }
+}
